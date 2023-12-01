@@ -10,6 +10,7 @@ const uri = 'mongodb+srv://dhruvhc2710:dhruvhc2710@cluster0.owzhnsu.mongodb.net/
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 module.exports = {
+    client,
     connectDB: async () => {
         await client.connect();
         console.log('Connected to MongoDB');
@@ -18,15 +19,10 @@ module.exports = {
     },
 
     clearAllEntries: async () => {
-       // try {
-            const db = await module.exports.connectDB();
+        const db = await module.exports.connectDB();
             const collection = db.collection('products'); 
             const result = await collection.deleteMany({});
             console.log(`${result.deletedCount} entries cleared from the collection.`);
-       // } 
-       /*finally {
-            await module.exports.closeDB();
-        }*/
     },
 
     closeDB: async () => {

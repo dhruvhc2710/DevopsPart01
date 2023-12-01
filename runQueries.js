@@ -12,7 +12,7 @@ const runQueries = async (db) => {
                 Colour: 'White',
                 Manufacturer: 'Climate Control Solutions',
                 StartingDateAvailable: new Date('2023-03-01'),
-                EndingDateAvailable: new Date('2023-04-30'),
+                EndingDateAvailable: new Date('2023-12-30'),
                 image: './compact_dehumidifier.jpg',
                 description: 'Ideal for small rooms, removes moisture efficiently.',
                 productid: 'DHM1001',
@@ -23,7 +23,7 @@ const runQueries = async (db) => {
                 Colour: 'Silver',
                 Manufacturer: 'SmartTech Appliances',
                 StartingDateAvailable: new Date('2023-02-15'),
-                EndingDateAvailable: new Date('2023-05-31'),
+                EndingDateAvailable: new Date('2023-12-31'),
                 image: './smart_dehumidifier_pro.jpg',
                 description: 'Wi-Fi enabled, advanced humidity control features.',
                 productid: 'DHM2002',
@@ -34,7 +34,7 @@ const runQueries = async (db) => {
                 Colour: 'Green',
                 Manufacturer: 'EcoLiving Solutions',
                 StartingDateAvailable: new Date('2023-03-10'),
-                EndingDateAvailable: new Date('2023-06-30'),
+                EndingDateAvailable: new Date('2023-12-30'),
                 image: './energy_efficient_dehumidifier.jpg',
                 description: 'Environmentally friendly, low power consumption.',
                 productid: 'DHM3003',
@@ -45,7 +45,7 @@ const runQueries = async (db) => {
                 Colour: 'Black',
                 Manufacturer: 'HomeMaster Technologies',
                 StartingDateAvailable: new Date('2023-01-20'),
-                EndingDateAvailable: new Date('2023-03-31'),
+                EndingDateAvailable: new Date('2023-12-31'),
                 image: './basement_master_dehumidifier.jpg',
                 description: 'Powerful unit for large spaces like basements.',
                 productid: 'DHM4004',
@@ -56,7 +56,7 @@ const runQueries = async (db) => {
                 Colour: 'Blue',
                 Manufacturer: 'Compact Living Gadgets',
                 StartingDateAvailable: new Date('2023-04-01'),
-                EndingDateAvailable: new Date('2023-07-15'),
+                EndingDateAvailable: new Date('2023-12-15'),
                 image: './mini_dehumidifier.jpg',
                 description: 'Small and lightweight, perfect for closets and bathrooms.',
                 productid: 'DHM5005',
@@ -67,7 +67,7 @@ const runQueries = async (db) => {
                 Colour: 'Gray',
                 Manufacturer: 'Industrial Solutions Inc.',
                 StartingDateAvailable: new Date('2023-02-01'),
-                EndingDateAvailable: new Date('2023-04-30'),
+                EndingDateAvailable: new Date('2023-12-30'),
                 image: './industrial_dehumidifier.jpg',
                 description: 'Heavy-duty unit for industrial and commercial use.',
                 productid: 'DHM6006',
@@ -78,7 +78,7 @@ const runQueries = async (db) => {
                 Colour: 'Beige',
                 Manufacturer: 'Silent Sleep Innovations',
                 StartingDateAvailable: new Date('2023-03-15'),
-                EndingDateAvailable: new Date('2023-06-15'),
+                EndingDateAvailable: new Date('2023-12-15'),
                 image: './quiet_bedroom_dehumidifier.jpg',
                 description: 'Operates silently, perfect for bedrooms.',
                 productid: 'DHM7007',
@@ -89,7 +89,7 @@ const runQueries = async (db) => {
                 Colour: 'Rose Gold',
                 Manufacturer: 'Contemporary Living Tech',
                 StartingDateAvailable: new Date('2023-02-10'),
-                EndingDateAvailable: new Date('2023-05-31'),
+                EndingDateAvailable: new Date('2023-12-31'),
                 image: './modern_design_dehumidifier.jpg',
                 description: 'Sleek and stylish, blends seamlessly with modern interiors.',
                 productid: 'DHM8008',
@@ -100,7 +100,7 @@ const runQueries = async (db) => {
                 Colour: 'Navy Blue',
                 Manufacturer: 'On-The-Go Gadgets',
                 StartingDateAvailable: new Date('2023-04-05'),
-                EndingDateAvailable: new Date('2023-07-31'),
+                EndingDateAvailable: new Date('2023-12-31'),
                 image: './rv_boat_dehumidifier.jpg',
                 description: 'Compact size, ideal for recreational vehicles and boats.',
                 productid: 'DHM9009',
@@ -111,7 +111,7 @@ const runQueries = async (db) => {
                 Colour: 'White',
                 Manufacturer: 'CleanAir Technologies',
                 StartingDateAvailable: new Date('2023-01-15'),
-                EndingDateAvailable: new Date('2023-04-30'),
+                EndingDateAvailable: new Date('2023-12-30'),
                 image: './dual_mode_dehumidifier_air_purifier.jpg',
                 description: 'Combines dehumidification with air purification capabilities.',
                 productid: 'DHM1010',
@@ -122,7 +122,7 @@ const runQueries = async (db) => {
                 Colour: 'Silver',
                 Manufacturer: 'Commercial Solutions Corp.',
                 StartingDateAvailable: new Date('2023-02-20'),
-                EndingDateAvailable: new Date('2023-05-15'),
+                EndingDateAvailable: new Date('2023-12-15'),
                 image: './commercial_dehumidifier.jpg',
                 description: 'Designed for large commercial spaces, exceptional moisture removal.',
                 productid: 'DHM1111',
@@ -133,7 +133,7 @@ const runQueries = async (db) => {
                 Colour: 'White',
                 Manufacturer: 'Economy Living Appliances',
                 StartingDateAvailable: new Date('2023-03-25'),
-                EndingDateAvailable: new Date('2023-06-30'),
+                EndingDateAvailable: new Date('2023-12-30'),
                 image: './budget_friendly_dehumidifier.jpg',
                 description: 'Affordable option with basic dehumidification features.',
                 productid: 'DHM1212',
@@ -144,7 +144,7 @@ const runQueries = async (db) => {
                 Colour: 'Green',
                 Manufacturer: 'Outdoor Storage Tech',
                 StartingDateAvailable: new Date('2023-02-05'),
-                EndingDateAvailable: new Date('2023-05-31'),
+                EndingDateAvailable: new Date('2023-12-31'),
                 image: './outdoor_storage_dehumidifier.jpg',
                 description: 'Weather-resistant, keeps stored items dry in outdoor units.',
                 productid: 'DHM1313',
@@ -155,7 +155,7 @@ const runQueries = async (db) => {
                 Colour: 'Brown',
                 Manufacturer: 'Pet Care Innovations',
                 StartingDateAvailable: new Date('2023-04-10'),
-                EndingDateAvailable: new Date('2023-07-15'),
+                EndingDateAvailable: new Date('2023-12-15'),
                 image: './pet_friendly_dehumidifier.jpg',
                 description: 'Safe for pets, reduces humidity in pet-friendly spaces.',
                 productid: 'DHM1414',
@@ -166,7 +166,7 @@ const runQueries = async (db) => {
                 Colour: 'Black',
                 Manufacturer: 'Home Workspace Solutions',
                 StartingDateAvailable: new Date('2023-01-20'),
-                EndingDateAvailable: new Date('2023-04-30'),
+                EndingDateAvailable: new Date('2023-12-30'),
                 image: './home_office_dehumidifier.jpg',
                 description: 'Compact design, perfect for home office environments.',
                 productid: 'DHM1515',
@@ -177,7 +177,7 @@ const runQueries = async (db) => {
                 Colour: 'Blue',
                 Manufacturer: 'On-The-Go Gadgets',
                 StartingDateAvailable: new Date('2023-03-01'),
-                EndingDateAvailable: new Date('2023-06-15'),
+                EndingDateAvailable: new Date('2023-12-15'),
                 image: './travel_size_dehumidifier.jpg',
                 description: 'Small and lightweight, ideal for travel and small spaces.',
                 productid: 'DHM1616',
@@ -188,7 +188,7 @@ const runQueries = async (db) => {
                 Colour: 'Gray',
                 Manufacturer: 'Basement Solutions Inc.',
                 StartingDateAvailable: new Date('2023-02-15'),
-                EndingDateAvailable: new Date('2023-05-31'),
+                EndingDateAvailable: new Date('2023-12-31'),
                 image: './basement_dehumidifier.jpg',
                 description: 'Powerful unit specifically designed for basement use.',
                 productid: 'DHM1717',
@@ -199,7 +199,7 @@ const runQueries = async (db) => {
                 Colour: 'Pink',
                 Manufacturer: 'KidSpace Innovations',
                 StartingDateAvailable: new Date('2023-03-10'),
-                EndingDateAvailable: new Date('2023-06-30'),
+                EndingDateAvailable: new Date('2023-04-30'),
                 image: './childrens_room_dehumidifier.jpg',
                 description: 'Safe and colorful, keeps children rooms comfortable.',
                 productid: 'DHM1818',
@@ -210,7 +210,7 @@ const runQueries = async (db) => {
                 Colour: 'Silver',
                 Manufacturer: 'SmartLiving Gadgets',
                 StartingDateAvailable: new Date('2023-02-01'),
-                EndingDateAvailable: new Date('2023-05-15'),
+                EndingDateAvailable: new Date('2023-04-15'),
                 image: './smart_closet_dehumidifier.jpg',
                 description: 'Fits seamlessly in closets, protects clothes from humidity.',
                 productid: 'DHM1919',
@@ -221,7 +221,7 @@ const runQueries = async (db) => {
                 Colour: 'Black',
                 Manufacturer: 'Advanced Climate Control',
                 StartingDateAvailable: new Date('2023-01-15'),
-                EndingDateAvailable: new Date('2023-04-30'),
+                EndingDateAvailable: new Date('2023-12-30'),
                 image: './humidity_control_tower.jpg',
                 description: 'Tower design with precise humidity control settings.',
                 productid: 'DHM2020',
@@ -244,6 +244,53 @@ const runQueries = async (db) => {
         );
         console.log('Product with the earliest starting date:', earliestStartDateProduct);
 
+        // Continue with the rest of the queries...
+        
+        //10.
+        const productsWithLargeDesc = await db.collection('products').find(
+            { Description: { $regex: /large/i } },
+            { _id: 0, Name: 1, Description: 1 }
+          ).toArray();
+          
+          console.log('Products with "large" in the Description:', productsWithLargeDesc);
+          
+        //11.
+
+        await db.collection('products').updateMany(
+            {},
+            { $rename: { 'Manufacturer': 'Produced_By' } }
+          );
+
+          
+        //12.
+
+        const longestAvailableProduct = await db.collection('products').aggregate([
+            {
+              $addFields: {
+                duration: { $subtract: ['$EndingDateAvailable', '$StartingDateAvailable'] }
+              }
+            },
+            {
+              $sort: { duration: -1 }
+            },
+            {
+              $limit: 1
+            },
+            {
+              $project: { _id: 0, Name: 1 }
+            }
+          ]).toArray();
+          
+          console.log('Product available for the longest period:', longestAvailableProduct[0]);
+          
+
+          
+        //13.
+        const discontinuedProducts = await db.collection('products').find(
+            { EndingDateAvailable: { $lt: new Date() } }
+          ).toArray();
+          
+          console.log('Discontinued products:', discontinuedProducts);
         // 7. most common product color
         const mostCommonColor = await db.collection('products').aggregate([
             {

@@ -244,53 +244,6 @@ const runQueries = async (db) => {
         );
         console.log('Product with the earliest starting date:', earliestStartDateProduct);
 
-        // Continue with the rest of the queries...
-        
-        //10.
-        const productsWithLargeDesc = await db.collection('products').find(
-            { Description: { $regex: /large/i } },
-            { _id: 0, Name: 1, Description: 1 }
-          ).toArray();
-          
-          console.log('Products with "large" in the Description:', productsWithLargeDesc);
-          
-        //11.
-
-        await db.collection('products').updateMany(
-            {},
-            { $rename: { 'Manufacturer': 'Produced_By' } }
-          );
-
-          
-        //12.
-
-        const longestAvailableProduct = await db.collection('products').aggregate([
-            {
-              $addFields: {
-                duration: { $subtract: ['$EndingDateAvailable', '$StartingDateAvailable'] }
-              }
-            },
-            {
-              $sort: { duration: -1 }
-            },
-            {
-              $limit: 1
-            },
-            {
-              $project: { _id: 0, Name: 1 }
-            }
-          ]).toArray();
-          
-          console.log('Product available for the longest period:', longestAvailableProduct[0]);
-          
-
-          
-        //13.
-        const discontinuedProducts = await db.collection('products').find(
-            { EndingDateAvailable: { $lt: new Date() } }
-          ).toArray();
-          
-          console.log('Discontinued products:', discontinuedProducts);
         // 7. most common product color
         const mostCommonColor = await db.collection('products').aggregate([
             {
@@ -309,41 +262,110 @@ const runQueries = async (db) => {
 
         console.log("The most common color is", mostCommonColor[0]._id);
 
-        // 8. Add Premiium_brand
+        // 8. Add Premium_brand
         await db.collection('products').updateMany(
             { Price: { $gte: 100 } },
             { $set: { Premium_Brand: true } }
         );
-        
+
         await db.collection('products').updateMany(
             { Price: { $lt: 100 } },
             { $set: { Premium_Brand: false } }
         );
-        
-        // 9. Set DIscounted Price
+
+        // 9. Set Discounted Price
         await db.collection('products').updateMany(
             {},
             [
                 {
                     $set: {
                         Sale_Price: {
-                            $round: [
-                                {
-                                    $subtract: ["$Price", { $multiply: ["$Price", 0.2] }]
-                                },
-                                2
-                            ]
+                            $cond: {
+                                if: { $gte: ["$Price", 100] },
+                                then: { $round: [{ $multiply: ["$Price", 0.8] }, 2] },
+                                else: null
+                            }
                         }
                     }
                 }
             ]
         );
-        
-        
+
+
+
+        //10.
+        const productsWithLargeDesc = await db.collection('products').find(
+            { Description: { $regex: /large/i } },
+            { _id: 0, Name: 1, Description: 1 }
+        ).toArray();
+
+        console.log('Products with "large" in the Description:', productsWithLargeDesc);
+
+        //11.
+
+        await db.collection('products').updateMany(
+            {},
+            { $rename: { 'Manufacturer': 'Produced_By' } }
+        );
+
+
+        //12.
+
+        const longestAvailableProduct = await db.collection('products').aggregate([
+            {
+                $addFields: {
+                    duration: { $subtract: ['$EndingDateAvailable', '$StartingDateAvailable'] }
+                }
+            },
+            {
+                $sort: { duration: -1 }
+            },
+            {
+                $limit: 1
+            },
+            {
+                $project: { _id: 0, Name: 1 }
+            }
+        ]).toArray();
+
+        console.log('Product available for the longest period:', longestAvailableProduct[0]);
+
+
+
+        //13.
+        const discontinuedProducts = await db.collection('products').find(
+            { EndingDateAvailable: { $lt: new Date() } }
+        ).toArray();
+
+        console.log('Discontinued products:', discontinuedProducts);
+
 
     } catch (error) {
         console.error('Error running queries:', error);
     }
+
+    // 14 TO check products in stock
+
+    const inStockProducts = await db.collection('products').find(
+        { 
+            StartingDateAvailable: { $lte: new Date() },
+            EndingDateAvailable: { $gte: new Date() }
+        },
+        { _id: 0, Name: 1, StartingDateAvailable: 1, EndingDateAvailable: 1 }
+    ).toArray();
+    
+    console.log('In-stock products:', inStockProducts);
+
+    // 15 Products currently on sale
+
+    const onSaleProducts = await db.collection('products').find(
+        { Sale_Price: { $exists: true } },
+        { _id: 0, Name: 1, Price: 1, Sale_Price: 1 }
+    ).toArray();
+    
+    console.log('Products currently on sale:', onSaleProducts);
+    
+    
 };
 
 module.exports = runQueries;

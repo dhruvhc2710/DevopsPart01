@@ -18,14 +18,15 @@ module.exports = {
     },
 
     clearAllEntries: async () => {
-        try {
+       // try {
             const db = await module.exports.connectDB();
             const collection = db.collection('products'); 
             const result = await collection.deleteMany({});
             console.log(`${result.deletedCount} entries cleared from the collection.`);
-        } finally {
+       // } 
+       /*finally {
             await module.exports.closeDB();
-        }
+        }*/
     },
 
     closeDB: async () => {

@@ -1,5 +1,5 @@
 const express = require('express');
-const { connectDB, closeDB } = require('./db');
+const { connectDB, closeDB , clearAllEntries} = require('./db');
 const runQueries = require('./runQueries');
 
 const app = express();
@@ -27,3 +27,5 @@ connectDB()
       process.exit();
     });
   });
+
+//clearAllEntries()

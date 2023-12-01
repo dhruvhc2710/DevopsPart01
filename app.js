@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Define your routes and controllers here
 
+clearAllEntries();
 // Connect to MongoDB and run queries
 connectDB()
   .then(async (db) => {
@@ -28,4 +29,3 @@ connectDB()
     });
   });
 
-//clearAllEntries()

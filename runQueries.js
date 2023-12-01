@@ -5,7 +5,6 @@ const runQueries = async (db) => {
         // Insert images
         await insertImages(db);
 
-        // Insert 20 products (you need to replace this with your actual data)
         const productsData = [
             {
                 Name: 'Compact Dehumidifier',
@@ -245,7 +244,55 @@ const runQueries = async (db) => {
         );
         console.log('Product with the earliest starting date:', earliestStartDateProduct);
 
-        // Continue with the rest of the queries...
+        // 7. most common product color
+        const mostCommonColor = await db.collection('products').aggregate([
+            {
+                $group: {
+                    _id: "$Colour",
+                    count: { $sum: 1 }
+                }
+            },
+            {
+                $sort: { count: -1 }
+            },
+            {
+                $limit: 1
+            }
+        ]).toArray();
+
+        console.log("The most common color is", mostCommonColor[0]._id);
+
+        // 8. Add Premiium_brand
+        await db.collection('products').updateMany(
+            { Price: { $gte: 100 } },
+            { $set: { Premium_Brand: true } }
+        );
+        
+        await db.collection('products').updateMany(
+            { Price: { $lt: 100 } },
+            { $set: { Premium_Brand: false } }
+        );
+        
+        // 9. Set DIscounted Price
+        await db.collection('products').updateMany(
+            {},
+            [
+                {
+                    $set: {
+                        Sale_Price: {
+                            $round: [
+                                {
+                                    $subtract: ["$Price", { $multiply: ["$Price", 0.2] }]
+                                },
+                                2
+                            ]
+                        }
+                    }
+                }
+            ]
+        );
+        
+        
 
     } catch (error) {
         console.error('Error running queries:', error);

@@ -13,8 +13,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Climate Control Solutions',
                 StartingDateAvailable: new Date('2023-03-01'),
                 EndingDateAvailable: new Date('2023-12-30'),
-                image: './compact_dehumidifier.jpg',
-                description: 'Ideal for small rooms, removes moisture efficiently.',
+                Image: 'compact_dehumidifier.jpg',
+                Description: 'Ideal for small rooms, removes moisture efficiently.',
                 productid: 'DHM1001',
             },
             {
@@ -24,8 +24,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'SmartTech Appliances',
                 StartingDateAvailable: new Date('2023-02-15'),
                 EndingDateAvailable: new Date('2023-12-31'),
-                image: './smart_dehumidifier_pro.jpg',
-                description: 'Wi-Fi enabled, advanced humidity control features.',
+                Image: 'smart_dehumidifier_pro.jpg',
+                Description: 'Wi-Fi enabled, advanced humidity control features.',
                 productid: 'DHM2002',
             },
             {
@@ -35,8 +35,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'EcoLiving Solutions',
                 StartingDateAvailable: new Date('2023-03-10'),
                 EndingDateAvailable: new Date('2023-12-30'),
-                image: './energy_efficient_dehumidifier.jpg',
-                description: 'Environmentally friendly, low power consumption.',
+                Image: 'energy_efficient_dehumidifier.jpg',
+                Description: 'Environmentally friendly, low power consumption.',
                 productid: 'DHM3003',
             },
             {
@@ -46,8 +46,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'HomeMaster Technologies',
                 StartingDateAvailable: new Date('2023-01-20'),
                 EndingDateAvailable: new Date('2023-12-31'),
-                image: './basement_master_dehumidifier.jpg',
-                description: 'Powerful unit for large spaces like basements.',
+                Image: 'basement_master_dehumidifier.jpg',
+                Description: 'Powerful unit for large spaces like basements.',
                 productid: 'DHM4004',
             },
             {
@@ -57,8 +57,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Compact Living Gadgets',
                 StartingDateAvailable: new Date('2023-04-01'),
                 EndingDateAvailable: new Date('2023-12-15'),
-                image: './mini_dehumidifier.jpg',
-                description: 'Small and lightweight, perfect for closets and bathrooms.',
+                Image: 'mini_dehumidifier.jpg',
+                Description: 'Small and lightweight, perfect for closets and bathrooms.',
                 productid: 'DHM5005',
             },
             {
@@ -68,8 +68,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Industrial Solutions Inc.',
                 StartingDateAvailable: new Date('2023-02-01'),
                 EndingDateAvailable: new Date('2023-12-30'),
-                image: './industrial_dehumidifier.jpg',
-                description: 'Heavy-duty unit for industrial and commercial use.',
+                Image: 'industrial_dehumidifier.jpg',
+                Description: 'Heavy-duty unit for industrial and commercial use.',
                 productid: 'DHM6006',
             },
             {
@@ -79,8 +79,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Silent Sleep Innovations',
                 StartingDateAvailable: new Date('2023-03-15'),
                 EndingDateAvailable: new Date('2023-12-15'),
-                image: './quiet_bedroom_dehumidifier.jpg',
-                description: 'Operates silently, perfect for bedrooms.',
+                Image: 'quiet_bedroom_dehumidifier.jpg',
+                Description: 'Operates silently, perfect for bedrooms.',
                 productid: 'DHM7007',
             },
             {
@@ -90,8 +90,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Contemporary Living Tech',
                 StartingDateAvailable: new Date('2023-02-10'),
                 EndingDateAvailable: new Date('2023-12-31'),
-                image: './modern_design_dehumidifier.jpg',
-                description: 'Sleek and stylish, blends seamlessly with modern interiors.',
+                Image: 'modern_design_dehumidifier.jpg',
+                Description: 'Sleek and stylish, blends seamlessly with modern interiors.',
                 productid: 'DHM8008',
             },
             {
@@ -101,8 +101,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'On-The-Go Gadgets',
                 StartingDateAvailable: new Date('2023-04-05'),
                 EndingDateAvailable: new Date('2023-12-31'),
-                image: './rv_boat_dehumidifier.jpg',
-                description: 'Compact size, ideal for recreational vehicles and boats.',
+                Image: 'rv_boat_dehumidifier.jpg',
+                Description: 'Compact size, ideal for recreational vehicles and boats.',
                 productid: 'DHM9009',
             },
             {
@@ -112,8 +112,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'CleanAir Technologies',
                 StartingDateAvailable: new Date('2023-01-15'),
                 EndingDateAvailable: new Date('2023-12-30'),
-                image: './dual_mode_dehumidifier_air_purifier.jpg',
-                description: 'Combines dehumidification with air purification capabilities.',
+                Image: 'dual_mode_dehumidifier_air_purifier.jpg',
+                Description: 'Combines dehumidification with air purification capabilities.',
                 productid: 'DHM1010',
             },
             {
@@ -123,8 +123,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Commercial Solutions Corp.',
                 StartingDateAvailable: new Date('2023-02-20'),
                 EndingDateAvailable: new Date('2023-12-15'),
-                image: './commercial_dehumidifier.jpg',
-                description: 'Designed for large commercial spaces, exceptional moisture removal.',
+                Image: 'commercial_dehumidifier.jpg',
+                Description: 'Designed for large commercial spaces, exceptional moisture removal.',
                 productid: 'DHM1111',
             },
             {
@@ -134,8 +134,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Economy Living Appliances',
                 StartingDateAvailable: new Date('2023-03-25'),
                 EndingDateAvailable: new Date('2023-12-30'),
-                image: './budget_friendly_dehumidifier.jpg',
-                description: 'Affordable option with basic dehumidification features.',
+                Image: 'budget_friendly_dehumidifier.jpg',
+                Description: 'Affordable option with basic dehumidification features.',
                 productid: 'DHM1212',
             },
             {
@@ -145,8 +145,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Outdoor Storage Tech',
                 StartingDateAvailable: new Date('2023-02-05'),
                 EndingDateAvailable: new Date('2023-12-31'),
-                image: './outdoor_storage_dehumidifier.jpg',
-                description: 'Weather-resistant, keeps stored items dry in outdoor units.',
+                Image: 'outdoor_storage_dehumidifier.jpg',
+                Description: 'Weather-resistant, keeps stored items dry in outdoor units.',
                 productid: 'DHM1313',
             },
             {
@@ -156,8 +156,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Pet Care Innovations',
                 StartingDateAvailable: new Date('2023-04-10'),
                 EndingDateAvailable: new Date('2023-12-15'),
-                image: './pet_friendly_dehumidifier.jpg',
-                description: 'Safe for pets, reduces humidity in pet-friendly spaces.',
+                Image: 'pet_friendly_dehumidifier.jpg',
+                Description: 'Safe for pets, reduces humidity in pet-friendly spaces.',
                 productid: 'DHM1414',
             },
             {
@@ -167,8 +167,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Home Workspace Solutions',
                 StartingDateAvailable: new Date('2023-01-20'),
                 EndingDateAvailable: new Date('2023-12-30'),
-                image: './home_office_dehumidifier.jpg',
-                description: 'Compact design, perfect for home office environments.',
+                Image: 'home_office_dehumidifier.jpg',
+                Description: 'Compact design, perfect for home office environments.',
                 productid: 'DHM1515',
             },
             {
@@ -178,8 +178,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'On-The-Go Gadgets',
                 StartingDateAvailable: new Date('2023-03-01'),
                 EndingDateAvailable: new Date('2023-12-15'),
-                image: './travel_size_dehumidifier.jpg',
-                description: 'Small and lightweight, ideal for travel and small spaces.',
+                Image: 'travel_size_dehumidifier.jpg',
+                Description: 'Small and lightweight, ideal for travel and small spaces.',
                 productid: 'DHM1616',
             },
             {
@@ -189,8 +189,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Basement Solutions Inc.',
                 StartingDateAvailable: new Date('2023-02-15'),
                 EndingDateAvailable: new Date('2023-12-31'),
-                image: './basement_dehumidifier.jpg',
-                description: 'Powerful unit specifically designed for basement use.',
+                Image: 'basement_dehumidifier.jpg',
+                Description: 'Powerful unit specifically designed for basement use.',
                 productid: 'DHM1717',
             },
             {
@@ -200,8 +200,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'KidSpace Innovations',
                 StartingDateAvailable: new Date('2023-03-10'),
                 EndingDateAvailable: new Date('2023-04-30'),
-                image: './childrens_room_dehumidifier.jpg',
-                description: 'Safe and colorful, keeps children rooms comfortable.',
+                Image: 'childrens_room_dehumidifier.jpg',
+                Description: 'Safe and colorful, keeps children rooms comfortable.',
                 productid: 'DHM1818',
             },
             {
@@ -211,8 +211,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'SmartLiving Gadgets',
                 StartingDateAvailable: new Date('2023-02-01'),
                 EndingDateAvailable: new Date('2023-04-15'),
-                image: './smart_closet_dehumidifier.jpg',
-                description: 'Fits seamlessly in closets, protects clothes from humidity.',
+                Image: 'smart_closet_dehumidifier.jpg',
+                Description: 'Fits seamlessly in closets, protects clothes from humidity.',
                 productid: 'DHM1919',
             },
             {
@@ -222,8 +222,8 @@ const runQueries = async (db) => {
                 Manufacturer: 'Advanced Climate Control',
                 StartingDateAvailable: new Date('2023-01-15'),
                 EndingDateAvailable: new Date('2023-12-30'),
-                image: './humidity_control_tower.jpg',
-                description: 'Tower design with precise humidity control settings.',
+                Image: 'humidity_control_tower.jpg',
+                Description: 'Tower design with precise humidity control settings.',
                 productid: 'DHM2020',
             },
         ];
@@ -283,7 +283,7 @@ const runQueries = async (db) => {
                             $cond: {
                                 if: { $gte: ["$Price", 100] },
                                 then: { $round: [{ $multiply: ["$Price", 0.8] }, 2] },
-                                else: null
+                                else: 0
                             }
                         }
                     }
